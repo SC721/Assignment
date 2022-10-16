@@ -1,0 +1,58 @@
+# 1
+capital = float(1000)
+daily_growth = float(0.12)
+period = float(7)
+
+simple_interest = capital + (capital * daily_growth * period)
+
+compound_interest = capital * (float(1) + daily_growth)**period
+
+print('simple interest: ', simple_interest)
+print('compound interest: ', round(compound_interest, 2))
+
+
+# 2
+print('"When we buy bitcoin with {} USD at the beginning of the week"'.format(1000))
+print('"we would earn {} USD at the end of the week, with an average gain of {}%."'.format(1210.68, 12))
+
+
+
+# 3
+F = float(input('temperature: '))
+conversion = (5/9) * (F - 32)
+print(round(conversion, 2))
+
+
+# 4
+# solution 1
+digit = int(input('please enter 3 digits: '))
+sum_of_digit = digit // 100 + (digit % 100) // 10 + digit % 10
+
+print(sum_of_digit)
+
+
+# solution 2
+digit = input('please enter 3 digits: ')
+list_digit = list(digit)
+new_list = [int(i) for i in list_digit]
+
+print(sum(new_list))
+
+
+# solution 3
+digit = input('please enter 3 digits: ')
+list_digit = list(digit)
+list_int = map(int, list_digit)
+
+print(sum(list_int))
+
+
+
+# 5
+from math import sqrt
+
+a = float(input('please input the first side length: '))
+b = float(input('please input the first side length: '))
+outcome = sqrt(a ** 2 + b ** 2)
+
+print('The length of the hypotenuse is: ', outcome)
